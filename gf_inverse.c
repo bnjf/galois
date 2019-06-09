@@ -50,8 +50,11 @@ main(int argc, char **argv)
 
   if (w < 1 || w > 32) { fprintf(stderr, "Bad w\n"); exit(1); }
 
-  if (w < 32 && x >= (1 << w)) { fprintf(stderr, "x must be in [0,%d]\n", (1 << w)-1); exit(1); }
+  if (x == 0 || (w < 32 && x >= (1 << w))) {
+    fprintf(stderr, "x must be in [1,%d]\n", (1 << w)-1);
+    exit(1);
+  }
 
-  printf("%u\n", galois_inverse(x, w));
+  printf("%d\n", galois_inverse(x, w));
   exit(0);
 }
