@@ -28,8 +28,11 @@ plank@cs.utk.edu
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "galois.h"
+#include <string.h>
+#include <time.h>
 #include <sys/time.h>
+
+#include "galois.h"
 
 #define BUFSIZE (50000)
 #define S_BUFSIZE (4096)
@@ -49,7 +52,7 @@ void usage(char *s)
   exit(1);
 }
 
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
   unsigned int w, alltype, nt, i, x, y, z, top, elt, q1, q2;
   unsigned int *b1, *b2;

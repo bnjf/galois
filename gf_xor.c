@@ -29,7 +29,7 @@ plank@cs.utk.edu
 #include <stdio.h>
 #include <stdlib.h>
 
-main( int argc, char **argv) 
+int main(int argc, char **argv)
 {
   unsigned int n, m, i;
 
